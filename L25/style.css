@@ -1,0 +1,19 @@
+.box{
+  width:200px;
+  height:200px;
+  border:1px solid black;
+  background-color:beige;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:auto;
+  transition:all 3s linear 2s;
+}
+p{
+  font-size:36px;
+}
+.box:hover{
+  /* transform:rotate(45deg); */
+  
+}

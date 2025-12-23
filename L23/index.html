@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin:0px;
+    padding:0px;
+
+  }
+  .container{
+    height:100vh;
+    width:100vw;
+    background-color:beige;
+    border:2px solid black;
+  }
+  #box1{
+    width:150px;
+    height:50px;
+    border:2px solid black;
+    background-color:rgb(243, 94, 94);
+    position:relative;
+    margin:10px;
+    border-radius:10px;
+    animation-name:right-movement;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+  #box2{
+    width:150px;
+    height:50px;
+    border:2px solid black;
+    background-color:rgb(243, 94, 94);
+    position:relative;
+    margin:10px;
+    border-radius:10px;
+    animation-name:left-movement;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+  #circle{
+    width:50px;
+    height:50px;
+    border:2px solid black;
+    background-color:rgb(243, 94, 94);
+    position:relative;
+    border-radius:25px;
+    top:150px;
+    left:600px;
+    animation-name:circle-movement;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+  @keyframes right-movement {
+     from{
+      top:0px;
+      left:0px;
+     }
+     to{
+      top:0px;
+      left:1000px;
+     }
+  }
+  @keyframes left-movement{
+    from{
+      top:500px;
+      left:1000px;
+    }
+    to{
+      top:500px;
+      left:0px;
+    }
+  }
+  @keyframes circle-movement{
+    0%{
+      top:150px;
+      left:600px;
+    }
+    25%{
+      top:0px;
+      left:1000px;
+    }
+    50%{
+      top:400px;
+      left:1000px;
+    }
+    75%{
+      top:0px;
+      left:0px;
+
+    }
+    100%{
+      top:400px;
+      left:0px;
+    }
+  }
+
+</style>
+<body>
+  <div class="container">
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="circle"></div>
+  </div>
+</body>
+</html>
