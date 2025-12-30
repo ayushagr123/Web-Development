@@ -23,16 +23,18 @@
 
 
 // let fpara = document.getElementById('fpara');
-let paras = document.querySelectorAll('p'); 
+// let paras = document.querySelectorAll('p'); 
 function alertFunction(event){
-  alert("You have clicked on "+ event.target.textContent);
+      if(event.target.nodeName==='SPAN'){
+        alert("You have clicked on "+ event.target.textContent);
+      }
+      
+  
 }
-
 // for(let i=0;i<paras.length;i++){
 //   let para = paras[i];
 //   para.addEventListener('click',alertFunction);
 // }
-
 //Instead of iterating over all paras add event listener on div which contains all paras
-let mydiv = getElementById('wrapper')
-wrapper.addEventListener('click',alertFunction);
+let myDiv = document.getElementById('wrapper');
+myDiv.addEventListener('click',alertFunction);
